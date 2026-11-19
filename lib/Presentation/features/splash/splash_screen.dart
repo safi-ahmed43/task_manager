@@ -51,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   BoxShadow(color: AppColors.primary.withValues(alpha: 0.32))
                 ]
               ),
-              child: Icon(Icons.check,color: AppColors.background,size: 48,),
+              child: Icon(Icons.note_alt_sharp,color: AppColors.background,size: 48,),
             ),
           ),
           SizedBox(height: 15,),

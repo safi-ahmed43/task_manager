@@ -1,13 +1,18 @@
-import 'package:flutter/cupertino.dart';
-import 'package:taskly/Core/app_colors.dart';
+import 'package:flutter/material.dart';
+
+import '../../../../Core/app_colors.dart';
 
 class FilterButton extends StatelessWidget {
-  const FilterButton({super.key, required this.status, required this.isSelected, required this.onTap});
+  const FilterButton({
+    super.key,
+    required this.label,
+    required this.isSelected,
+    required this.onTap,
+  });
 
+  final String label;
   final bool isSelected;
   final VoidCallback onTap;
-
-  final String status;
 
   @override
   Widget build(BuildContext context) {
@@ -17,19 +22,18 @@ class FilterButton extends StatelessWidget {
         height: 32,
         decoration: BoxDecoration(
           color: isSelected ? AppColors.primary : AppColors.white,
-          borderRadius: BorderRadius.circular(100),
+          borderRadius: .circular(100),
           border: Border.all(
-            color: isSelected ? AppColors.primary : AppColors.bodyText
-          )
+            color: isSelected ? AppColors.primary : AppColors.border,
+          ),
         ),
-        padding: EdgeInsets.symmetric(horizontal: 15),
         alignment: .center,
         child: Text(
-          status,
+          label,
           style: TextStyle(
             fontSize: 13,
-            fontWeight: FontWeight.bold,
-            color: isSelected ? AppColors.white:AppColors.bodyText,
+            fontWeight: .w600,
+            color: isSelected ? AppColors.white : AppColors.bodyText,
           ),
         ),
       ),

@@ -2,8 +2,8 @@ class AppStrings {
   AppStrings._();
 
   // App
-  static const String appName = 'Taskly';
-  static const String appTagline = 'Plan your day, simply.';
+  static const String appName = 'SmartToDo';
+  static const String appTagline = 'Start your day the smart way.';
 
   // Home
   static const String goodMorning = 'GOOD MORNING';

@@ -1,0 +1,38 @@
+import 'package:flutter/material.dart';
+
+import '../../../../Core/app_colors.dart';
+
+class StatusTab extends StatelessWidget {
+  const StatusTab({
+    super.key,
+    required this.label,
+    required this.isSelected,
+    required this.onTap,
+  });
+  final String label;
+  final bool isSelected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: 38,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: isSelected ? AppColors.white : AppColors.softGrey,
+          borderRadius: BorderRadius.circular(9),
+        ),
+        child: Text(
+          label,
+          style: TextStyle(
+            fontSize: 13,
+            fontWeight: FontWeight.w700,
+            color: isSelected ? AppColors.primaryText : AppColors.secondaryText,
+          ),
+        ),
+      ),
+    );
+  }
+}
